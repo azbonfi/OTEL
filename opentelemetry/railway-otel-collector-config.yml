@@ -17,10 +17,8 @@ receivers:
         endpoint: 0.0.0.0:4318
 
 exporters:
-  logging:
-    loglevel: error
-  # debug:
-  #   verbosity: detailed
+  debug:
+    verbosity: normal
 
   # not working
   # prometheusremotewrite:
