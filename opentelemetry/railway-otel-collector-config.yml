@@ -17,6 +17,8 @@ receivers:
         endpoint: 0.0.0.0:4318
 
 exporters:
+  logging:
+    loglevel: error
   # debug:
   #   verbosity: detailed
 
@@ -58,6 +60,9 @@ extensions:
     endpoint: :55679
 
 service:
+  telemetry:
+    logs:
+      level: "error"
   extensions: [pprof, zpages, health_check]
   pipelines:
     traces:
